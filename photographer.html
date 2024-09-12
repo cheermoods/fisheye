@@ -14,26 +14,94 @@
   </head>
   <body>
     <header>
-      <img src="assets/images/logo.png" class="logo" />
+      <a href="">
+        <img src="assets/images/logo.png" class="logo" />
+      </a>
     </header>
     <main id="main">
       <div class="photograph-header">
+        <div class="photograph-infos">
+          <h1 class="name"></h1>
+          <div class="details">
+            <span class="city"></span>
+            <p class="tagline"></p>
+          </div>
+        </div>
+
         <button class="contact_button" onclick="displayModal()">
           Contactez-moi
         </button>
+
+        <div class="portrait">
+          <img src="" alt="" />
+        </div>
       </div>
     </main>
+    <!-- Modal -->
     <div id="contact_modal">
       <div class="modal">
         <header>
           <h2>Contactez-moi</h2>
+          <br />
+          <span class="name"></span>
           <img src="assets/icons/close.svg" onclick="closeModal()" />
         </header>
-        <form>
-          <div>
-            <label>Prénom</label>
-            <input />
+        <form method="get">
+          <div class="formData">
+            <label for="first">Prénom</label><br />
+            <input
+              class="text-control"
+              type="text"
+              id="first"
+              name="first"
+              minlength="2"
+              required
+            /><br />
+            <span class="error-message" id="error-first"
+              >Le prénom doit avoir au moins 2 caractères.</span
+            >
           </div>
+          <div class="formData">
+            <label for="last">Nom</label><br />
+            <input
+              class="text-control"
+              type="text"
+              id="last"
+              name="last"
+              minlength="2"
+              required
+            /><br />
+            <span class="error-message" id="error-last"
+              >Le nom doit avoir au moins 2 caractères.</span
+            >
+          </div>
+          <div class="formData">
+            <label for="email">E-mail</label><br />
+            <input
+              class="text-control"
+              type="email"
+              id="email"
+              name="email"
+              required
+            /><br />
+            <span class="error-message" id="error-email"
+              >Veuillez entrer une adresse e-mail valide.</span
+            >
+          </div>
+          <div class="formData">
+            <label for="message">Message</label><br />
+            <input
+              class="text-control"
+              type="text"
+              id="message"
+              name="message"
+              required
+            /><br />
+            <span class="error-message" id="error-email"
+              >Veuillez entrer une adresse e-mail valide.</span
+            >
+          </div>
+
           <button class="contact_button">Envoyer</button>
         </form>
       </div>

@@ -38,7 +38,8 @@ async function getPhotographers() {
 
   // et bien retourner le tableau photographers seulement une fois récupéré
   return {
-    photographers: [...photographers, ...photographers, ...photographers],
+    //photographers: [...photographers, ...photographers, ...photographers],
+    photographers,
   }; //spread operator
 }
 
@@ -57,9 +58,6 @@ async function displayData(photographers) {
 
 async function init() {
   // Récupère les datas des photographes
-
-  // const data = await fetch("http://localhost/miniprojets/fisheye/data/photographers.json");
-
   const { photographers } = await getPhotographers();
   displayData(photographers);
 }
